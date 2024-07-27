@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Our memory book 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="motive">
+    <h2>
+      A book isn't enough; I'd my entire being
+      <h2>into your life. 💕</h2>
+      <br />
+      <br>
+      <h2>Best friend forever💕 Anything for uhh😻.
+        <br />
+        <br>
+        <span> You're so sweet💖</span>
+      </h2>
+  </div>
+  <!-- <div class="instruction">Flip the page to read it</div> -->
+  <div class="book">
+    <div class="page cover-front" onclick="movePage(this, 1)">
+      <h1> My Devil💕</h1>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <img src="mouna4.jpg" height="420" width="300" alt="">
+      <div class="hat"><i class="fab fa-pied-piper-hat"></i></div>
+      <br>
+      <br><br>
+      <br>
+      <br>
+    </div>
+    <div class="page cover-front" onclick="movePage(this, 2)"></div>
+    <div class="page text-page" onclick="movePage(this, 3)">
+      <p>Dear Mounaa❤️, this is for you 🤞💖</p>
+      <p>
+        "Every moment with you feels like <br>
+        a cherished chapter from my favorite book <br>
+        and I can't wait to write many more together🫀<br>
+        Your friendship means the world to me<br>
+        and I'm grateful for every memory we create 👀 <br>
+
+        Even though life isn’t always perfect, my gratitude and affection for you remain constant. Let’s continue this
+        beautiful journey side by side 😍"
+
+      </p>
+
+      <iframe id="videoFrame" width="360" height="215" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+
+  <script>
+    async function fetchVideo() {
+      const apiKey = 'AIzaSyA_OSflZ7jzW3JKjyTMh9GGDsTE_fC5mtg';
+      const query = 'Malang sajna';
+      const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&order=relevance&key=${apiKey}`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        if (data.items && data.items.length > 0) {
+          const videoId = data.items[0].id.videoId;
+          const videoUrl = `https://www.youtube.com/embed/${videoId}`;
+
+          const iframe = document.getElementById('videoFrame');
+          iframe.src = videoUrl;
+          iframe.title = "YouTube video player";
+        } else {
+          console.error('No video found for the given query');
+        }
+      } catch (error) {
+        console.error('Error fetching video:', error);
+      }
+    }
+    fetchVideo();
+  </script>
+      <br /><br />
+      <p>Note: Play the video while readingg....</p>
+      <p> I know i have dedicated Enna Sona for uhh but this song remains closest to my heart <3 </p>
+
+      <!-- <br /><br /><br /> -->
+      <p> Next page..</p>
+    </div>
+    <div class="page text-page" onclick="movePage(this, 4)">
+      <p>
+        <br><br>
+        You coming into my life and then just staying like this.
+        You know what, whenever you fight with me or get upset with me,<br/>
+        only I know how I feel 😭, I just don't express it.
+        I care for you to the moon and sky 🤞💖.
+<br><br>
+        Do you know which was the best day of my life!!????
+    <br>    I'll tell you, it was 1st January 😭, do you know why???<br> Because that day
+        we talked a lot, we talked for the first time for so long 🤞, and I'm so blessed to have a friend like you 😭.
+      <br> You are the best, Mounaa, and yes, I am blessed to have our friendship. 😭🤞💖.<br>
+        <br> You are my strength 💪🏾
+        <br> You are my weakness 😢
+        <br> You are my everything 💗
+      </p>
+
+
+    </div>
+    <div class="page text-page" onclick="movePage(this, 5)">
+      <p>
+        Should I praise you or the one who made you?
+        <p></p>
+        <p>Seeing you brings a smile in my face. Your positivity is contagious, and everyone loves being around you.</p>
+        <p>Talking to you brings peace to my heart, Mounaa ❤️. I want to celebrate all the special moments of our friendship with you 😘.<p>
+        I just want to keep talking to you and being there for you,
+        No matter what happens in the world, I want to always be your friend 😭🤞.
+          <br><br>
+        You have become such an important part of my life,<br>
+        That I can't imagine it without you.<br>
+        So, will you stay with me and keep our friendship strong?
+          <br><br>
+        You ask me to praise you,
+        I could write a book about our friendship,<br>
+        Just stay as my best friend, my dear ❤️<br>
+        In the story of my life, you're the main character 😘.
+<br><br>
+        Others might say 2023 was a bad year, but for me, it was the best.
+        Do u know Why?<br>
+        Because God gifted me your friendship 😭🤞.
+      </p>
+    </div>
+    <div class="page text-page" onclick="movePage(this, 6)">
+      <p>
+        <br><br><br>
+        I loveeee you so much, Mounaa ❤️<br>
+        You are the most precious gift in my life,<br>
+        so I can't take any risk of losing you 😭🤞.
+        <br><br>
+        If anyone asks me to choose between money and you, I'll choose money 🤣
+        Just kidding 🤣, I'll choose you 💗<br><br>
+        You're my perfect friend and the most important person in my life 🥺.
+        <br><br>
+        You know, Mounaa ❤️, I wasn't always like this.<br>
+        You know, I never cared much about who comes and goes in my life,<br>
+        but somehow, you started to matter a lot to me.<br>
+        I don't know much, but I know that I can't be without you now.<br><br>
+        You became my priorityy 💗<br>
+        i made you cry 😭🤞<br>
+        but trust me i won't let u cry again<br>
+        It's my promise 💛<br>
+        
+      </p>
+    </div>
+    <div class="page text-page">
+  <p>
+    Just want to say, Mounaa ❤️, that I care for you deeply and will always do so,
+    until my last breath. Mounaa ❤️, I love you so much. You see me in my struggles,
+    but have you ever seen how much love I have for you? Look at how much I care 🥺.
+    Once again, I love you, Mounaa 💖.
+      </p>
+      <p>......This is Not limited here</p>
+      <p>You are My Everything Mounaa 💖.</p>
+
+      <h2> Mounaa❤️ Will u be my BestfrndForever??</h2>
+      <h2> Hope u accept my request</h2>
+      <h2>and reply on this post</h2>
+      <br />
+      <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" />
+      <button id="tellme">Yes Nikhil🥺</button>
+    </div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+    <div class="page"></div>
+  </div>
+
+  <script>
+    document.getElementById("tellme").addEventListener("click", function () {
+      alert("you're always in my heart Mounaa❤️ , Drop a Message when you are Free ..");
+    });
+  </script>
+  <script src="mouna.js"></script>
+</body>
+
+</html>
