@@ -18,10 +18,21 @@
     <p>Mounaa Please click on this👆 I have made something to make you feel more special💖</p>
     <div class="ribbon"></div>
     <div class="tag">
-      <a href="book.html">Mounaa🫀</a>
+      <a href="book.html" id="mounaa-link">Mounaa<span class="butterfly">🦋</span></a>
     </div>
     <div class="music-note">🎵</div>
   </div>
+
+  <script>
+    document.getElementById('mounaa-link').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('.butterfly').classList.add('fly-away');
+
+      setTimeout(function () {
+        window.location.href = 'book.html';
+      }, 1000);
+    });
+  </script>
 </body>
 
 </html>
