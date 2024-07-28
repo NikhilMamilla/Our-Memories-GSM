@@ -52,60 +52,59 @@
       </p>
 
       <iframe id="videoFrame" width="360" height="215" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-  <script>
-    async function fetchVideo() {
-      const apiKey = 'AIzaSyA_OSflZ7jzW3JKjyTMh9GGDsTE_fC5mtg';
-      const query = 'Malang sajna';
-      const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&order=relevance&key=${apiKey}`;
+      <script>
+        async function fetchVideo() {
+          const apiKey = 'AIzaSyA_OSflZ7jzW3JKjyTMh9GGDsTE_fC5mtg';
+          const query = 'Malang sajna';
+          const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&order=relevance&key=${apiKey}`;
 
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('API Response:', data);
+
+            if (data.items && data.items.length > 0) {
+              const videoId = data.items[0].id.videoId;
+              const videoUrl = `https://www.youtube.com/embed/${videoId}`;
+
+              const iframe = document.getElementById('videoFrame');
+              iframe.src = videoUrl;
+              iframe.title = "YouTube video player";
+            } else {
+              console.error('No video found for the given query');
+            }
+          } catch (error) {
+            console.error('Error fetching video:', error);
+          }
         }
-
-        const data = await response.json();
-        console.log('API Response:', data);
-
-        if (data.items && data.items.length > 0) {
-          const videoId = data.items[0].id.videoId;
-          const videoUrl = `https://www.youtube.com/embed/${videoId}`;
-
-          const iframe = document.getElementById('videoFrame');
-          iframe.src = videoUrl;
-          iframe.title = "YouTube video player";
-        } else {
-          console.error('No video found for the given query');
-        }
-      } catch (error) {
-        console.error('Error fetching video:', error);
-      }
-    }
-    fetchVideo();
-  </script>
+        fetchVideo();
+      </script>
       <br /><br />
       <p>Note: Play the video while readingg....</p>
       <p> I know i have dedicated Enna Sona for uhh but this song remains closest to my heart <3 </p>
 
-      <!-- <br /><br /><br /> -->
-      <p> Next page..</p>
+          <!-- <br /><br /><br /> -->
+          <p> Next page..</p>
     </div>
     <div class="page text-page" onclick="movePage(this, 4)">
       <p>
         <br><br>
         You coming into my life and then just staying like this.
-        You know what, whenever you fight with me or get upset with me,<br/>
+        You know what, whenever you fight with me or get upset with me,<br />
         only I know how I feel 😭, I just don't express it.
         I care for you to the moon and sky 🤞💖.
-<br><br>
+        <br><br>
         Do you know which was the best day of my life!!????
-    <br>    I'll tell you, it was 1st January 😭, do you know why???<br> Because that day
+        <br> I'll tell you, it was 1st January 😭, do you know why???<br> Because that day
         we talked a lot, we talked for the first time for so long 🤞, and I'm so blessed to have a friend like you 😭.
-      <br> You are the best, Mounaa, and yes, I am blessed to have our friendship. 😭🤞💖.<br>
+        <br> You are the best, Mounaa, and yes, I am blessed to have our friendship. 😭🤞💖.<br>
         <br> You are my strength 💪🏾
         <br> You are my weakness 😢
         <br> You are my everything 💗
@@ -116,21 +115,23 @@
     <div class="page text-page" onclick="movePage(this, 5)">
       <p>
         Should I praise you or the one who made you?
-        <p></p>
-        <p>Seeing you brings a smile in my face. Your positivity is contagious, and everyone loves being around you.</p>
-        <p>Talking to you brings peace to my heart, Mounaa ❤️. I want to celebrate all the special moments of our friendship with you 😘.<p>
+      <p></p>
+      <p>Seeing you brings a smile in my face. Your positivity is contagious, and everyone loves being around you.</p>
+      <p>Talking to you brings peace to my heart, Mounaa ❤️. I want to celebrate all the special moments of our
+        friendship with you 😘.
+      <p>
         I just want to keep talking to you and being there for you,
         No matter what happens in the world, I want to always be your friend 😭🤞.
-          <br><br>
+        <br><br>
         You have become such an important part of my life,<br>
         That I can't imagine it without you.<br>
         So, will you stay with me and keep our friendship strong?
-          <br><br>
+        <br><br>
         You ask me to praise you,
         I could write a book about our friendship,<br>
         Just stay as my best friend, my dear ❤️<br>
         In the story of my life, you're the main character 😘.
-<br><br>
+        <br><br>
         Others might say 2023 was a bad year, but for me, it was the best.
         Do u know Why?<br>
         Because God gifted me your friendship 😭🤞.
@@ -155,15 +156,15 @@
         i made you cry 😭🤞<br>
         but trust me i won't let u cry again<br>
         It's my promise 💛<br>
-        
+
       </p>
     </div>
     <div class="page text-page">
-  <p>
-    Just want to say, Mounaa ❤️, that I care for you deeply and will always do so,
-    until my last breath. Mounaa ❤️, I love you so much. You see me in my struggles,
-    but have you ever seen how much love I have for you? Look at how much I care 🥺.
-    Once again, I love you, Mounaa 💖.
+      <p>
+        Just want to say, Mounaa ❤️, that I care for you deeply and will always do so,
+        until my last breath. Mounaa ❤️, I love you so much. You see me in my struggles,
+        but have you ever seen how much love I have for you? Look at how much I care 🥺.
+        Once again, I love you, Mounaa 💖.
       </p>
       <p>......This is Not limited here</p>
       <p>You are My Everything Mounaa 💖.</p>
