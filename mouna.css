@@ -32,10 +32,12 @@
   margin-top: -50px;
   box-shadow: 0 0 10px -3px #ffffff inset;
 }
+
 .tag:after {
   content: "Bestfriend";
   animation: colorChange 5s infinite;
 }
+
 .music-note {
   font-size: 100px;
   color: #ff69b4;
@@ -46,22 +48,47 @@
   transform-style: preserve-3d;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.butterfly {
+  display: inline-block;
+  transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+}
+
+.fly-away {
+  transform: translateX(300px) translateY(-300px);
+  opacity: 0;
+}
+
 @keyframes colorChange {
   0% {
     color: #FFD700;
   }
+
   20% {
     color: #FF69B4;
   }
+
   40% {
     color: #1E90FF;
   }
+
   60% {
     color: #32CD32;
   }
+
   80% {
     color: #FF4500;
   }
+
   100% {
     color: #FFD700;
   }
@@ -70,20 +97,23 @@
 .container .tag :hover {
   color: rgb(131, 223, 130);
 }
+
 .ribbon {
   width: 100%;
   height: 20px;
   background: rgb(255, 255, 255);
   box-shadow: 0 0 10px -3px #333;
 }
+
 .tag a {
   color: rgb(239, 231, 13);
   text-decoration: none;
 }
+
 p {
   position: absolute;
   color: rgb(8, 0, 223);
   top: 69%;
-  font-family:comic sans ms;
+  font-family: comic sans ms;
   font-weight: 900;
 }
